@@ -1,0 +1,9 @@
+Part 1
+---
+We first need to parse the input to get the list of games. The for each and every game we just to the brute force calculations by increasing
+ the holding time, calculating start speed and resulting distance and counting the amount of ways to beat the record.
+
+Part 2
+---
+Same as part 1, just the input parsing is a bit different, it makes one number instead of a list, so we need to make calculations only for
+one game.

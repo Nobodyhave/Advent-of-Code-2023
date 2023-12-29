@@ -1,0 +1,10 @@
+Part 1
+---
+We convert the input to the grid where we can address every character with 2 indices. Then we go through the grid. When we hit a digit we
+read the whole number and then check if it has a symbol adjacent to it. As a result we summarise all those numbers.
+
+Part 2
+---
+In the second part we have a map of gears, where key is the combination of row and columns indices, value is the Gear object which holds
+adjacent numbers. When we go through the numbers same way as in part 1, we check whether the adjacent symbol is a gear. If yes, we put the
+number to the gear object. Then for all valid gears (having 2 numbers adjacent) we calculate the gear ration and the result.

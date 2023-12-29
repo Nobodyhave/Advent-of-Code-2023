@@ -1,0 +1,9 @@
+Part 1
+---
+We split the input to lines, from each line create a string consisting of the first and last digit, convert it to integer and sum.
+
+Part 2
+---
+Second problem is similar, the difference is how to find first and last digit. For the first digit we get the first digit itself, then we
+look for all the first occurrences of the digits spelled by text and get the first of them. Then we take the first of these two. Same for
+the last digit.

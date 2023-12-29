@@ -1,0 +1,17 @@
+Part 1
+---
+First we parse and organise the data. One thing here is to determine the power of a hand. This can be done by just groping the cards to
+their counts and analysing the result case by case, there are not too many variants. This was wrapped to Hand and HandType classes. Then we
+need to sort the hands first by their power, then by the cards themselves. The latter is a canonical example for the radix sort. But we need
+ a few little tricks. First is that we need to sort by power. For this we can just append the power to the beginning of the hand and radix
+ sort will do the rest, treating the power and the MSD of the string. Then our letters go not in alphabetical order, but in some special
+ order. We need to adjust it and provide this knowledge to the radix sort. A small function `getCharIndex` is doing it. Then we just do the
+ sort and calculate the result.
+
+Part 2
+---
+Very similar to part 1. There are 2 major changes. First one is changing the `getCharIndex` function, as J is now the least valuable card
+for the sorting process. Another one is actually treating the J as a wild card. Probably there could be a clever way to analyze the current
+hand and do the proper changes, but the brute force approach worked too. For this we just need to list all the possible permutations for all
+ the J cards. Then we just apply the parsing function from the part 1, converting a string to a hand. And pick the one with the largest
+ power.

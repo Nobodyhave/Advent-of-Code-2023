@@ -1,0 +1,8 @@
+Part 1
+---
+In the first part we split the lines and then create a Card object from each line. Then using each card we just calculate the result.
+
+Part 2
+---
+Start is the same as in part 1. We use a queue to go on. When we get a card we just throw the copies to the end of the queue. And continue
+polling from the head of the queue. For each polling we increase the count.

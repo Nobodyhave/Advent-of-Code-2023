@@ -1,0 +1,12 @@
+Part 1
+---
+Regular backtracking with some conditions how to move.
+
+Part 2
+---
+Same as part 1 with even less conditions, which actually makes things harder as the problem space increases. It's the longesth
+path in a graph problem. The Longest path problem in general is a NP-Complete Problem because there are no found algorithm to solve the
+problem in a Hamiltonian graph within polynomial time. So there is no good way to solve it, unless we put some restrictions on the graph. I
+was lazy to check it. So my options were brute force or some heuristics running for a long time and printing the next best path length.
+Luckily 10 minutes of brute force gave me the correct result.
+

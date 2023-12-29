@@ -1,0 +1,17 @@
+Part 1
+---
+The basic idea of this part is finding the point of intersection of 2 lines. https://www.geeksforgeeks.org/program-for-point-of-intersection-of-two-lines.
+With some caveats. First we need to check whether the point is in the test area. Second we need to check that the point is on the right side
+ of the start point. As our hail trajectories are not lines, but rays, it could be that the intersection of the lines happens, but on the
+ not existing part of the ray.
+
+Part 2
+---
+This one was very tricky. I started from looking into intersection of 2 lines in 3D space. This video was pretty helpful https://www.youtube.com/watch?v=N-qUfr-rz_Y
+In this case we have 3 equations and 2 unknowns. I've tried to create a system of linear equations and solve it with the help of Gaussian Eliminations.
+But either they weren't working or the matrix was singular. Also, it required iteration over some parameters, because we have more unknowns that the equations.
+Looking into Reddit gave also other options, like gradient descend or least squares, but I was feeling that linear equations would work.
+Finally, I stumbled over this post https://www.reddit.com/r/adventofcode/comments/18q40he/2023_day_24_part_2_a_straightforward_nonsolver/
+It had a bit different approach to the equations setting. And it worked like a charm. In the end I got the rounding error.
+Coordinates were double for me. I was rounding them to the nearest integer, but had to actually round down to get the correct answer.
+

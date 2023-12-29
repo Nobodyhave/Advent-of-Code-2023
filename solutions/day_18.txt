@@ -1,0 +1,19 @@
+Part 1
+---
+For the first part I initially reused the approach from the Day 10 - created a polygon from the vertices, found its rectangular boundaries,
+ checked whether every point in these boundaries is inside the polygon or not, added the perimeter of the polygon. It worked, but it was
+ quite slow.
+
+Part 2
+---
+In the second part distances became a lot larger, so the approach wouldn't work. After some googling I've found the Shoelace formula for the
+ polygon. But it was giving the incorrect results on my polygon. It was happening because the polygon border has a thickness and it has to
+ be included in the area too. The initial set of points was giving sometimes the outer coordinates of the border and sometimes the inner
+ coordinates. I've tried to create another set of points based on the original one in that way, that I was always using the outer
+ coordinates of the border. It worked for part 1, both small and big input. And for part 2 small input. Unfortunately it was giving wrong
+ result for the big input. Not sure whether it was an implementation problem of the approach. Some more googling gave me pick's theorem. The
+  number of boundary points can be calculated by just adding up all the distances in the instructions, and the area can be figured out by
+  applying shoelace formula to the vertices of the polygon without their modification. It will be only inner area. Once we have those two
+  pieces of information, Pick's theorem can be used to get the number of interior points, and then adding the number of interior points to
+  the number of boundary points gives us the answer.
+

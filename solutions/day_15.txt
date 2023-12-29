@@ -1,0 +1,11 @@
+Part 1
+---
+This part just need the implementation of hash function and the carrying out the calculations on the input.
+
+Part 2
+---
+Not harder than the first part. Requires some data organisation. I've organised boxes in the Array (constant access by index and we know the
+ size). Inside the box I use LinkedList for lenses. It has O(N) complexity for search, but O(1) for add and remove operations. It's also
+ possible to use LinkedHashMap to get O(1) average for all the operations and keep the order, but the input is not very big, so not really
+ necessary.
+

@@ -1,0 +1,17 @@
+Part 1
+---
+The problem smelled like a shortest path from the beginning, but was a bit obscured. So I started to solve it with BFS, but got out of
+memory, because I was trying to check all the possible states. I tried to add some pruning, but got the wrong answer. I tried to turn grid
+to the explicit graph, but it appeared to be not a straightforward task. Then I tried Dijkstra algorithm with dynamic edge calculation based
+ on direction and steps travelled. It worked, but the answer was wrong. After some tries I realised that it's not enough to have a 2D array
+ of shortest paths, as in reality we have 4 variables affecting the result. I tried the 4D array, but it was ugly and I didn't manage to get
+  the correct answer. So I ended up with just a map for keeping the shortest paths, where key contains a data class with 4 parameters (row,
+  columns, direction, steps) and value is the shortest path to such state. In the end I just check all the keys from the map that have the
+  bottom right cell coordinates and pick the smallest one. Dijkstra itself is not optimised, I just throw everything in the priority queue,
+  without checking for the duplicates.
+
+Part 2
+---
+This one required small updates to the dynamic edge calculation method and to the picking up the values from the result map. We now get only
+ the ones where the step count is more or equal to 4.
+

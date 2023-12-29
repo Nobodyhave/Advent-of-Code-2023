@@ -1,0 +1,14 @@
+Part 1
+---
+First part jus requires to neatly organise the data to classes, parse it and do the calculations. Without properly organised data it will
+be a mess.
+
+Part 2
+---
+Second part is mostly based on some shady assumptions. First we need to analyse the input. We can see, that rx node has only one input, and
+it's a conjunction node. Which means, that only when the all of its inputs are set to HIGH a low signal will be sent to the rx node. As we
+are hitting the button infinite amount of times there definitely will be cycles. What we want is to find when each of the inputs is turned
+to high. We can put some logging to the code and print the count of the button presses. For each of the inputs we can see that it turns HIGH
+ only once per few thousands of cycles. We make an assumption that the cycles are aligned, so what we need to find is the LCM of their
+ length. We calculate it, and it's the correct answer.
+

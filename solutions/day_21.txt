@@ -1,0 +1,12 @@
+Part 1
+---
+This part is a trivial backtracking with remembering the visited stated to decrease the search space.
+
+Part 2
+---
+Second part I can't say that I've really understood. It definitely can't be solved without looking for some patterns and examining the input
+. Having empty row and column for start together with the empty borders according to other people make this solvable mathematically. Another
+ thing is that 26501365 = 202300 * 131 + 65, where 65 is count of steps to the border and 131 is the size of the map. Bases on this, people
+ were looking for the first 3 members of a quadratic function (board expands quadratically with the steps count). Calculating them would
+ give us 3 points on a parabole. Asking Wolfram Alpha would give us the function. Asking it to calculate for x= would give us the answer.
+

@@ -1,0 +1,13 @@
+Part 1
+---
+First we parse the data and organise it in a simple map. Then we just follow the instructions until we find the exit node.
+
+Part 2
+---
+In the second part we can do the same. We just need to analyse not one node, but a set of nodes. Unfortunately this solution takes too long
+. By running this solution it's clearly visible that the amount of steps is huge. But we actually have the limited amount of states. For
+every node it's possible to be in one of the steps of the instructions, so the amount of the unique states is the product of the amount of
+nodes (~800) and amount of instructions (~200). So the total is ~ 160 000. Which means that we are hitting the same states. As the
+instructions are cyclic, hitting the same states happens also in a cyclic manner. But cycle lengths are different for the different nodes.
+What we need is to find the cycle length for each node ending with "Z". Then we just find the LCM of these cycles lengths and this will be
+the answer.

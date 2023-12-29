@@ -1,0 +1,8 @@
+Part 1
+---
+We split the input to the lines, parse the line to the Game class, containing game id and balls counts for each attempt. Then we check that
+in each attempt the amount of the balls used is not larger that the maximum allowed amount of balls. And sum the valid game ids.
+
+Part 2
+---
+In the second part we just need to fold all the game attempts to find the largerst amount of balls used in any of them.

@@ -1,0 +1,12 @@
+Part 1
+---
+Usual brute force works. We need to find all the rows that should be expanded and then all the columns that should be expanded. Based on it
+we can create a new 2D array of the expanded universe. From it we can get the positions of the galaxies and calculate the distances together
+ with the resulting distance.
+
+Part 2
+---
+Brute force won't work here of course. What we need to do is to calculate the position of the galaxy without creating the new 2D array. In
+order to do it we can take the expandable rows and columns indices and sort them. Then when calculating the galaxy's coordinates we check
+how many expandable rows and columns were before this galaxy and put this number scaled as the coordinates. The rest is to calculate the
+distance. As this approach can be applied to any expansion scale, I reused it in the first problem too.

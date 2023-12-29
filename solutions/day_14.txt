@@ -1,0 +1,13 @@
+Part 1
+---
+This part is an easy implementation task. We need to make the tilt and calculate the load. Tilting can be done based on the bubble sort
+algorithm. Calculation is straightforward.
+
+Part 2
+---
+In second part first we need to implement tilts to other directions and then make a cycle. The amount of cycles is huge, so brute force
+won't work. But we can see, that as the board is not very big, input is cyclic and amount of cycles is big. This probably means that there
+will be a cycle after some tilts. We can check it. For this we "hash" the board to a string, create a set and start putting the new states
+to it. After some time we indeed hit a cycle. Then we calculate the length of a cycle. And finally we calculate how many steps in the cycle
+we'll be when the given amount of repetitions is done. And when it's done we are calculating the load.
+

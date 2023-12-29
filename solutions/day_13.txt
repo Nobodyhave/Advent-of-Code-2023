@@ -1,0 +1,14 @@
+Part 1
+---
+In the first part we can do a brute force. Take 2 rows, compare is they are mirroring each other. If yes take adjacent rows etc. Until we
+hit the pattern boundaries. If mirror line is not found do the same for columns. If mirror line is found calculate the value for it. Repeat
+for all the patterns and sum up.
+
+Part 2
+---
+For the second part I first just tried to adopt the same brute force solution. In addition, I was changing each and every symbol in the
+pattern one by one and running the part one solution on it. But there were some caveats, or maybe I was misinterpreting the text of the task
+. I was either getting the old line, or no line or some other problems. Solution became messy, and I decided to try another approach.
+Smudging actually allows, or even forces us to allow one error in the mirroring process. So I introduced the parameter for this. For part 1
+it's 0, and for part 2 it's 1. Then I changed the logic of scanning the rows and columns from checking is they are mirroring to the error
+counting. If the error count was matching the one that we were looking for, then note was reported. And this approach worked perfectly.

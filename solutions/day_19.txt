@@ -1,0 +1,18 @@
+Part 1
+---
+First part jus requires to neatly organise the data to classes, parse it and do the calculations. Without properly organised data it will
+be a mess.
+
+Part 2
+---
+Second part requires only working with the workflows. The idea is to run the DFS from the starting workflow with no limits imposed on part
+categories. Then the limits will be updated according to the workflows.
+- for each workflow we examine the rules
+- if we hit the first rule, we pass to the workflow that follows the successful operation limits, modified in a way to satisfy the
+operation. Or do the math if it's accepted part.
+- if it's not first rule, we have to update the limits in a way opposite to the all previous rules. Modify limits to satisfy the
+current operation. And then pass to the next one or do the math.
+- if it's a terminal rule we do the math or pass the limits to the other workflow.
+For every accepted state we have the range in which each category will be. For this state distinct combinations will be the product of the
+differences of the range start and end. The total result will be the sum of the combinations of all the accepted states.
+

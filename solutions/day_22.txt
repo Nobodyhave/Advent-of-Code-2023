@@ -1,0 +1,22 @@
+Part 1
+---
+This part is not algorithmically heavy, but requires a careful implementation. One approach is to implement a brute force. Just create a 3D
+grid of bricks and emulate their fall by one z row starting from the lowest z. It would take some time, but will work. Also it will require
+checking whether the current cell is connected with others and is allowed to fall. Could be a tedious task. So it would make sense to keep
+the bricks as a data structure with some properties. But then it makes sense not to do the whole simulation. We can just sort bricks by
+their z coordinate and make them fall from the lowest to the highest. This is needed to ensure that when the brick falls nothing would
+change beneath it. I did it, but the answer was wrong on the big input. I then implemented the brute force and input generator. Ran my
+algorith and brute force in parallel indefinitely, checking the results on each iteration. But everything worked well. This couldn't be. I
+mean something should be wrong. I examined the code multiple times and finally found out that I've shot my leg with the mutability of the
+bricks. I was creating the new list to pass to the different methods, but it was reusing the same objects. So the brute force was using
+already fallen brick, producing obviously the same output. I fixed it and then got the generated input where two algorithms gave different
+results. Input was only 10 bricks, so I manually have drawn it in the FreeCAD, final result and initial result. Then on the initial result
+I've manually simulated the fall and found 2 places that were wrong in my intersection function. After fixing them my initial algorith
+worked like a charm.
+
+Part 2
+---
+Second part can be built on the top of the first one. We need the fall function for the brick to return whether it has fallen or not. And
+simulation function to count how many brick has fallen. Then we just do part one, remove 1 brick, sort again and do part 1 for the new
+composition. Repeat for every brick. Takes some time, but not very long.
+

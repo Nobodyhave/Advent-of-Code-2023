@@ -1,0 +1,13 @@
+Part 1
+---
+First we need to organise the date from the Almanac. AlmanacEntry and Almanac classes are for this. They have all the info about seeds, maps
+ etc. Then we just take each seed from the input and trace it though the maps to find the location with the smallest number. Solution is
+ pretty straightforward, but requires careful coding and good data organisation
+
+Part 2
+---
+If we try to do the same approach (single seed tracing) then it would take a lot of time. So the approach would be to use the whole ranges.
+What we need is to take some input range, get it through the map and then get the output ranges. There are many tricky moments around with
+many conditions, making this approach hard to code. The main trick is to handle multiple ranges and sources. The main idea is to find all
+the intersection between the sources ranges and ranges in a map. Only after all the intersections are found we can add the values from the
+sources that don't have mapping.

@@ -1,0 +1,12 @@
+Part 1
+---
+This part is mostly implementation. Neatly organising all conditions of ray tracing is very useful to reduce the amout of errors. Otherwise,
+it's a regular BFS or DFS algorithm. I've chosen the BFS approach. When the light passes the cell it's marked as energized. Also it's added
+to the processed cells. This is needed because the light can enter the cell from the different sides and provide the different output. The
+condition to stop will be when we exhaust all the possible combinations for all the cells which the light can reach.
+
+Part 2
+---
+In this part we just apply the procedure from the first part to every edge cell. And as everything was already neatly organised it's just
+adding a search for maximum with the help of 2 cycles.
+

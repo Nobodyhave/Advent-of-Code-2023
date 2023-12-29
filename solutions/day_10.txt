@@ -1,0 +1,16 @@
+Part 1
+---
+The first problem is not very hard. It can be solved in multiple ways. I've chosen the flood fill with the BFS. So it starts filling the
+loop until 2 streams meet at the furthest point. The only trick is to check possible values of the start pipe and use only valid one.
+
+Part 2
+---
+Second part is more complicated. There are possibly multiple approaches to solve it. What I did was first finding all the cells in the loop.
+ I used DFS with backtracking for it. As a result I got all the cells involved. In the next step I converted them to the polygon, creating
+ edges from the point. And as a last step I've used a polygon even-odd rule to check every point in the grid whether it's inside the polygon
+  (excluding edges) or not. But the result was incorrect. Small test cases were passing, but not the main input. To visualise the problem I
+  did output to the text file and notices some things that shouldn't be there. But it was hard to read. Then I did some AWT drawing to have
+  a better visualisation. Examining it I've noticed that all the problems were behind the starting point. After some analysis I've found out
+   that because the starting point was in the middle of the vertical edge, which created multiple edges instead of one. In general either
+   the polygon building algorithm or even-odd algorithm should be modified to handle this, but for the sake of speed I've just added the
+   correct edge and removed the problematic one.

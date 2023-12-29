@@ -1,0 +1,10 @@
+Part 1
+---
+First part can be solved with a brute force DFS. Just trying all the possible arrangements and validating them would do the job as the
+input size is not large.
+
+Part 2
+---
+This one would take too long for the usual brute force. In this case usually some pruning or memoization help. I've tried pruning, but it
+wasn't enough. So, there are 2 possibilities: top down DP with the memoization or bottom up DP. The second one usually looks more neat, but
+I didn't have time to come up with the solution, so I've got one from the Reddit.
